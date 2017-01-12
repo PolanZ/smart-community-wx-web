@@ -1,0 +1,74 @@
+.tabBar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background: #F7FAFB;
+	border-top: 1px solid #dfe5e7;
+	z-index: 9999;
+}
+.tabBar .section {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 48px;
+	width: 250%;
+}
+.tabBar .section > view {
+	padding: 0 14px;
+	color: #486075;
+}
+.tabBar .section > view.active {
+	color: #e34920;
+}
+.tabBar .section .iconfont {
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 2px;
+}
+
+.container > .section {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 48px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.section .content {
+	padding: 10px;
+}
+.section .content > view {
+	margin-top: 16px;
+}
+.section .content view:first-child {
+	margin-top: 0;
+}
+.infoView {
+	display: flex;
+	flex-direction: row;
+	padding: 8px 10px;
+	background-color: #f0f3f6;
+	border: 1px solid #d3d9df;
+	border-radius: 5px;
+	color: #486075;
+	font-size: 100%;
+}
+.infoView .iconfont {
+	color: #e34920;
+	font-size: 16px;
+	margin-right: 4px;
+}
+.content-info .infoView > view {
+	width: 49%;
+}
+.section .content view.title {
+	color: #6d7e8d;
+}
+.section .content view.con {
+	margin-top: 8px;
+}
+
+.hxList {
+
+}

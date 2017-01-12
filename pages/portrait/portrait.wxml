@@ -1,0 +1,54 @@
+<view class="container">
+	<loading hidden="{{loading}}">
+        加载中...
+    </loading>
+
+    <scroll-view class="section" scroll-y>
+    	<template is="{{ztTemplate}}" data="{{ztData}}" />
+    </scroll-view>
+
+    <scroll-view class="tabBar" scroll-x>
+    	<view class="section">
+    		<view wx:for="{{tabList}}" wx:key="tab" id="{{item.id}}" class="{{ currentTab == item.id ? 'active' : '' }}" bindtap="tabEventHandle">
+    			<i class="iconfont {{item.icon}}"></i>
+    			<text>{{item.name}}</text>
+    		</view>
+    	</view>
+    </scroll-view>
+</view>
+
+<template name="info">
+	<view class="content content-info">
+		<view class="infoView">
+			<view class="households">
+				<i class="iconfont icon-people"></i>
+				<text>{{ztData[1].value}} 户</text>
+			</view>
+			<view class="buildings">
+				<i class="iconfont icon-building"></i>
+				<text>{{ztData[2].value}} 栋</text>
+			</view>
+		</view>
+		<view class="hxList">
+			<view class="title">画像总结</view>
+			<view class="con">
+				<view class="left">
+					<view class="list1">
+						<i class="iconfont icon-people"></i>
+						<text>{{ztData[3].value}}</text>
+					</view>
+				</view>
+				<view class="right"></view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<template name="people">
+	<view class="content content-people">
+		<view class="infoView">
+			<i class="iconfont icon-bookmarks"></i>
+			<text>{{ztData[0].value}}</text>
+		</view>
+	</view>
+</template>

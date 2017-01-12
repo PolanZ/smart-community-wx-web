@@ -1,0 +1,39 @@
+<view class="container">	
+	<view class="section section-form">
+	    <form bindsubmit="searchSubmit">
+	    	<view class="view-form">
+		    	<view class="view-input">
+			    	<icon type="search" size="17" />
+			        <input class="search-input" type="text" 
+			        	placeholder="输入社区名称或ID搜索" 
+			        	placeholder-class="input-placeholder" 
+			        	focus="{{focus}}"
+			        	bindblur="searchSubmit"
+			        	/>
+		        </view>
+		        <view class="view-button">
+		        	<button type="default" plain="true" form-type="submit">搜索</button>
+		        </view>
+		    </view>
+	    </form>
+	</view>
+	<view class="section section-result">
+		<scroll-view class="result-list-view" scroll-y="true">
+		    <view class="list-view" 
+		    	wx:for="{{sResultList}}"  
+		    	wx:key="sResultList"
+		    	hover="true">
+		    	<view class="tt">
+		    		{{item.name}}
+		    	</view>
+		    	<view class="tc">
+		    		<text class="sc_name">{{item.branchName}}</text>
+		    		<view class="info">
+		    			<i class="iconfont icon-people" ></i><text>{{item.households}} 户</text>
+		    			<i class="iconfont icon-building"></i><text>{{item.Buildings}} 栋</text>
+		    		</view>
+		    	</view>
+		    </view>
+	    </scroll-view>
+	</view>
+</view>

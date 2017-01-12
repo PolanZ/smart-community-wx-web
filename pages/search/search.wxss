@@ -1,0 +1,85 @@
+/* pages/search/search.wxss */
+
+.container {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+.section-form {
+    padding: .4em .8em;
+    background: #217dca;
+}
+.section-form .view-form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.view-input {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: .3em .4em;
+}
+.view-button {
+	display: inline-block;
+	width: 88rpx;
+	padding-left: .8em;
+}
+.view-button button {
+	padding: 0;
+	color: #fff;
+	line-height: 1;
+	border: 0;
+	background: transparent;
+}
+.search-input {
+	flex: 1;
+	display: inline-block;
+    color: #333;
+    font-size: 100%;
+    padding: 0 .2em;
+}
+.input-placeholder {
+    color: #aaa;
+    font-size: 100%;
+}
+.section-result {
+	flex: 1;
+	background: #fff;
+}
+.result-list-view {
+	height: 100%;
+}
+.result-list-view .list-view {
+	padding: .6em .8em;
+	border-bottom: 1px solid #ebebeb;
+}
+.result-list-view .list-view.view-hover {
+	background: #ebebeb;
+}
+.list-view .tc {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 8px;
+}
+.list-view .tc .sc_name {
+	color: #999;
+	font-size: 82.5%;
+}
+.list-view .tc .info .iconfont {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 18px;
+	color: #aaa;
+	margin-right: 4px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.list-view .tc .info .icon-building {
+	margin-left: 10px;
+}

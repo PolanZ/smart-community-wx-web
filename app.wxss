@@ -1,0 +1,74 @@
+/**app.wxss**/
+page {
+  height: 100%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/*iconfont iconcss*/
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_v4uarxh2motlz0k9.eot?t=1484209295164'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_v4uarxh2motlz0k9.eot?t=1484209295164#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_v4uarxh2motlz0k9.woff?t=1484209295164') format('woff'), /* chrome, firefox */
+  url('//at.alicdn.com/t/font_v4uarxh2motlz0k9.ttf?t=1484209295164') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_v4uarxh2motlz0k9.svg?t=1484209295164#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-qianbi:before { content: "\e600"; }
+
+.icon-music2:before { content: "\e60f"; }
+
+.icon-education:before { content: "\e615"; }
+
+.icon-traffic:before { content: "\e655"; }
+
+.icon-hospital:before { content: "\e6e9"; }
+
+.icon-music:before { content: "\e957"; }
+
+.icon-tubu:before { content: "\e60d"; }
+
+.icon-bookmarks:before { content: "\e650"; }
+
+.icon-calculator:before { content: "\e617"; }
+
+.icon-shequ-more:before { content: "\e652"; }
+
+.icon-touzi:before { content: "\e618"; }
+
+.icon-people-more:before { content: "\e6fc"; }
+
+.icon-shequ:before { content: "\e60c"; }
+
+.icon-jiaotong:before { content: "\e876"; }
+
+.icon-qianxi:before { content: "\e68a"; }
+
+.icon-food:before { content: "\e687"; }
+
+.icon-info:before { content: "\e99c"; }
+
+.icon-location:before { content: "\e9b3"; }
+
+.icon-search:before { content: "\e601"; }
+
+.icon-building:before { content: "\e603"; }
+
+.icon-people:before { content: "\e602"; }
+
+.icon-consume:before { content: "\e625"; }
+
