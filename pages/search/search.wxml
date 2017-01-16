@@ -22,7 +22,8 @@
 		    <view class="list-view" 
 		    	wx:for="{{sResultList}}"  
 		    	wx:key="sResultList"
-		    	hover="true">
+		    	hover="true"
+		    	hover-stay-time="200">
 		    	<view class="tt">
 		    		{{item.name}}
 		    	</view>

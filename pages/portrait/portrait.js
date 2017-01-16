@@ -1,4 +1,5 @@
 var getSqzt = require('../../mock/getSQZT')
+// var echarts = require('../../echarts/echarts.js')
 
 Page({
     data: {

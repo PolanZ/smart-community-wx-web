@@ -9,7 +9,13 @@
 
     <scroll-view class="tabBar" scroll-x>
     	<view class="section">
-    		<view wx:for="{{tabList}}" wx:key="tab" id="{{item.id}}" class="{{ currentTab == item.id ? 'active' : '' }}" bindtap="tabEventHandle">
+    		<view wx:for="{{tabList}}" 
+    			wx:key="tab" 
+    			id="{{item.id}}" 
+    			class="{{ currentTab == item.id ? 'active' : '' }}" 
+    			bindtap="tabEventHandle"
+    			hover="true"
+    			hover-stay-time="200">
     			<i class="iconfont {{item.icon}}"></i>
     			<text>{{item.name}}</text>
     		</view>
@@ -34,11 +40,48 @@
 			<view class="con">
 				<view class="left">
 					<view class="list1">
-						<i class="iconfont icon-people"></i>
 						<text>{{ztData[3].value}}</text>
+						<i class="iconfont icon-people"></i>
+					</view>
+					<view class="list2">
+						<text>{{ztData[4].value}}</text>
+						<i class="iconfont icon-jiaotong"></i>
+					</view>
+					<view class="list3">
+						<text>{{ztData[5].value}}</text>
+						<i class="iconfont icon-consume"></i>
+					</view>
+					<view class="list4">
+						<text>{{ztData[6].value}}</text>
+						<i class="iconfont icon-music2"></i>
+					</view>
+					<view class="list5">
+						<text>{{ztData[7].value}}</text>
+						<i class="iconfont icon-food"></i>
 					</view>
 				</view>
-				<view class="right"></view>
+				<view class="right">
+					<view class="list6">
+						<i class="iconfont icon-education"></i>
+						<text>{{ztData[8].value}}</text>
+					</view>
+					<view class="list7">
+						<i class="iconfont icon-hospital"></i>
+						<text>{{ztData[9].value}}</text>
+					</view>
+					<view class="list8">
+						<i class="iconfont icon-touzi"></i>
+						<text>{{ztData[10].value}}</text>
+					</view>
+					<view class="list9">
+						<i class="iconfont icon-qianxi"></i>
+						<text>{{ztData[11].value}}</text>
+					</view>
+					<view class="list10">
+						<i class="iconfont icon-shequ"></i>
+						<text>{{ztData[12].value}}</text>
+					</view>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -51,4 +94,40 @@
 			<text>{{ztData[0].value}}</text>
 		</view>
 	</view>
+</template>
+
+<template name="traffic">
+	<view class="content content-tranffic"></view>
+</template>
+
+<template name="consume">
+	<view class="content"></view>
+</template>
+
+<template name="music">
+	<view class="content"></view>
+</template>
+
+<template name="food">
+	<view class="content"></view>
+</template>
+
+<template name="education">
+	<view class="content"></view>
+</template>
+
+<template name="hospital">
+	<view class="content"></view>
+</template>
+
+<template name="fnance">
+	<view class="content"></view>
+</template>
+
+<template name="migration">
+	<view class="content"></view>
+</template>
+
+<template name="marketing">
+	<view class="content"></view>
 </template>
