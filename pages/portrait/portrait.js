@@ -2,12 +2,12 @@ var getSqzt = require('../../mock/getSQZT')
 // var echarts = require('../../echarts/echarts.js')
 
 Page({
-    data: {
-    	loading: false,
-    	ztTemplate: 'info',
-    	ztData: [],
-    	currentTab: 0,	// 默认显示概况info的数据
-    	tabList: [{
+	data: {
+		loading: false,
+		ztTemplate: 'info',
+		ztData: [],
+		currentTab: 0,	// 默认显示概况info的数据
+		tabList: [{
 			id: 0,
 			name: '概况',
 			icon: 'icon-info'
@@ -52,24 +52,24 @@ Page({
 			name: '营销',
 			icon: 'icon-shequ-more'
 		}]
-    },
-    onLoad: function () {
-    	var that = this
-    	// console.log(getSqzt)
-    	if (getSqzt && getSqzt.length != 0) {
-    		wx.setNavigationBarTitle({
-    			title: getSqzt[0].value[0].value
-    		})
-    		that.setData({
-    			loading: true,
-    			ztData: getSqzt[0].value	// 默认显示概况info的数据
-    		})
+	},
+	onLoad: function () {
+		var that = this
+		// console.log(getSqzt)
+		if (getSqzt && getSqzt.length != 0) {
+			wx.setNavigationBarTitle({
+				title: getSqzt[0].value[0].value
+			})
+			that.setData({
+				loading: true,
+				ztData: getSqzt[0].value	// 默认显示概况info的数据
+			})
 
-    	}else {
-    		that.setData({
-    			loading: true
-    		})
-    		wx.showModal({
+		}else {
+			that.setData({
+				loading: true
+			})
+			wx.showModal({
 			  title: '加载失败',
 			  content: '确定返回上一级页面',
 			  success: function(res) {
@@ -78,26 +78,26 @@ Page({
 			    }
 			  }
 			})
-    	}
-    },
-    tabEventHandle: function(e) {
-    	var ztId = parseInt(e.currentTarget.id)
-    	// console.log('tabCLick:', ztId)
-    	switch (ztId) {
-    		case 0:
-    			this.setData({
-    				ztTemplate: 'info',
-    				currentTab: ztId,
-    				ztData: getSqzt[ztId].value,
-    			})
-    			break;
-    		case 1:
-    			this.setData({
-    				ztTemplate: 'people',
-    				currentTab: ztId,
-    				ztData: getSqzt[ztId].value,
-    			})
-    			break;
-    	}
-    }
+		}
+	},
+	tabEventHandle: function(e) {
+		var ztId = parseInt(e.currentTarget.id)
+		// console.log('tabCLick:', ztId)
+		switch (ztId) {
+			case 0:
+				this.setData({
+					ztTemplate: 'info',
+					currentTab: ztId,
+					ztData: getSqzt[ztId].value,
+				})
+				break;
+			case 1:
+				this.setData({
+					ztTemplate: 'people',
+					currentTab: ztId,
+					ztData: getSqzt[ztId].value,
+				})
+				break;
+		}
+	}
 })
